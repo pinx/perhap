@@ -31,12 +31,13 @@ defmodule Perhap.Mixfile do
   end
 
   defp deps do
-    [{:cowboy, github: "ninenines/cowboy"},
+    [
+     {:cowboy, github: "ninenines/cowboy", ref: "2.2.0", override: true},
      {:ranch, github: "ninenines/ranch", ref: "1.4.0", override: true},
-     {:cowlib, github: "ninenines/cowlib", ref: "2.0.0-rc.1", override: true},
+     {:cowlib, github: "ninenines/cowlib", ref: "2.1.0", override: true},
      {:poison, "~> 3.1"},
      {:uuid, github: "okeuday/uuid"},
-     {:gun, github: "ninenines/gun", ref: "1.0.0-pre.3", runtime: false},
+     {:gun, github: "ninenines/gun", ref: "1.0.0-pre.3", runtime: false, override: true},
      {:libcluster, "~> 2.1"},
      {:swarm, "~> 3.0"},
      {:dialyxir, "~> 0.5", only: :dev, runtime: false},
